@@ -44,7 +44,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
-	{ "###",	  gaplessgrid },
+	{ "###",      gaplessgrid },
  	{ "[@]",      spiral },
  	{ "[\\]",     dwindle },
 	{ "[]=",      tile },    /* first entry is default */
