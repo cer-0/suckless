@@ -96,7 +96,6 @@ static const char *slockcmd[]   = { "slock", NULL };
 static const char *dsplycmd[]   = { "monitor", NULL };
 static const char *srshtcmd[]   = { "srsh", NULL };
 static const char *sshotcmd[]   = { "sshot", NULL };
-
 /* volume-media keys */
 static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
 static const char *upvol[]   = { "amixer", "set", "Master", "2+", NULL };
@@ -150,7 +149,7 @@ static Key keys[] = {
         { MODKEY|ControlMask|ShiftMask, XK_m,      setlayout,      {.v = &layouts[9]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_s,      togglesticky,   {0} },
+	{ MODKEY,                       XK_a,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
