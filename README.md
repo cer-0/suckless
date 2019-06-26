@@ -12,10 +12,13 @@ dwm is an extremely fast, small, and dynamic window manager for X.
     + [personal](#personal)
 - [Running dwm](#running-dwm)
 - [Configuration](#configuration)
+- [Shots](#shots)
 
-<small><a href='http://ecotrust-canada.github.io/markdown-toc/'>TOC generated with markdown-toc</a></small>
+<small><a href='http://ecotrust-canada.github.io/markdown-toc/'>TOC generated with markdown-toc</a></small> <3
 
 ## About
+
+![Personal](./pic/04.png)
 
 This fork contains two versions of dwm, a __"vanilla"__ version
 and a __"personal"__ one. The first comes with a couple of 
@@ -29,17 +32,15 @@ In order to build dwm you need the Xlib header files.
 
 
 ### Optional dependencies
------------
 
 ```
-siji-font dina-font terminus-font playerctl scrot slock tabbed st surf dmenu
-alsamixer alsa-utils
+    siji-font dina-font terminus-font playerctl alsamixer alsa-utils nnn
+    scrot slock tabbed st surf dmenu
 ```
 
 > You can build `slock tabbed st surf dmenu`, check
   [suckless](https://suckless.org) website. `siji-font` is available in the
   [AUR](https://aur.archlinux.org/packages/siji-git).
-
 
 ## Installation
 Clone and edit `config.mk` to match your local setup (dwm is installed into
@@ -67,7 +68,7 @@ make && make install
   to have the setup functionalities.
 
 ## Running dwm
------------
+
 Add the following line to your `.xinitrc` to start dwm using `startx`:
 
 ```
@@ -101,3 +102,16 @@ Or create a custom script and execute it in `.xinitrc`.
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code. (:
 
+## Shots
+
+Single focused window
+
+![single](./pic/01.png)
+
+Fake busy
+
+![busy](./pic/02.png)
+
+Grid
+
+![grid](./pic/03.png)

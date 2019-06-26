@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
 	"dina:size=8", 
-	"xos4 Terminus:size=10",
+	/* "xos4 Terminus:size=10", */
 	"Siji:style=Regular",
 	"monospace:size=10",
 };
