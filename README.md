@@ -39,8 +39,8 @@ In order to build dwm you need the Xlib header files.
 ```
 
 > You can build `slock tabbed st surf dmenu`, check
-  [suckless](https://suckless.org) website. `siji-font` is available in the
-  [AUR](https://aur.archlinux.org/packages/siji-git).
+  [suckless](https://suckless.org) website. `siji-font` is available in
+  this [repo](https://github.com/stark/siji).
 
 ## Installation
 Clone and edit `config.mk` to match your local setup (dwm is installed into
