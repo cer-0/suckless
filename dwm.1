@@ -49,108 +49,135 @@ label toggles between tiled and floating layout.
 .B Button3
 click on a tag label adds/removes all windows with that tag to/from the view.
 .TP
-.B Mod1\-Button1
+.B MODKEY\-Button1
 click on a tag label applies that tag to the focused window.
 .TP
-.B Mod1\-Button3
+.B MODKEY\-Button3
 click on a tag label adds/removes that tag to/from the focused window.
 .SS Keyboard commands
 .TP
-.B Mod1\-Shift\-Return
+.B MODKEY\-c
 Start
 .BR st(1).
 .TP
-.B Mod1\-p
+.B MODKEY\-e
 Spawn
 .BR dmenu(1)
 for launching other programs.
 .TP
-.B Mod1\-,
+.B MODKEY\-,
 Focus previous screen, if any.
 .TP
-.B Mod1\-.
+.B MODKEY\-.
 Focus next screen, if any.
 .TP
-.B Mod1\-Shift\-,
+.B MODKEY\-Shift\-,
 Send focused window to previous screen, if any.
 .TP
-.B Mod1\-Shift\-.
+.B MODKEY\-Shift\-.
 Send focused window to next screen, if any.
 .TP
-.B Mod1\-b
+.B MODKEY\-b
 Toggles bar on and off.
 .TP
-.B Mod1\-t
+.B MODKEY\-t
 Sets tiled layout.
 .TP
-.B Mod1\-f
+.B MODKEY\-f
 Sets floating layout.
 .TP
-.B Mod1\-m
+.B MODKEY\-m
 Sets monocle layout.
 .TP
-.B Mod1\-space
+.B MODKEY\-s
+Sets spiral layout.
+.TP
+.B MODKEY\-Shift\-s
+Sets dwindle layout.
+.TP
+.B MODKEY\-g
+Sets gaplessgrid layout.
+.TP
+.B MODKEY\-v
+Sets bstack layout.
+.TP
+.B MODKEY\-Shift\-v
+Sets bstackhoriz layout.
+.TP
+.B MODKEY\-z
+Sets centeredmaster layout.
+.TP
+.B MODKEY\-Shift\-z
+Sets centeredfloatingmaster layout.
+.TP
+.B MODKEY\-space
 Toggles between current and previous layout.
 .TP
-.B Mod1\-j
+.B MODKEY\-j
 Focus next window.
 .TP
-.B Mod1\-k
+.B MODKEY\-k
 Focus previous window.
 .TP
-.B Mod1\-i
+.B MODKEY\-Shift\-j
+Rotate stack +1.
+.TP
+.B MODKEY\-Shift\-k
+Rotate stack \-1.
+.TP
+.B MODKEY\-i
 Increase number of windows in master area.
 .TP
-.B Mod1\-d
+.B MODKEY\-d
 Decrease number of windows in master area.
 .TP
-.B Mod1\-l
+.B MODKEY\-l
 Increase master area size.
 .TP
-.B Mod1\-h
+.B MODKEY\-h
 Decrease master area size.
 .TP
-.B Mod1\-Return
+.B MODKEY\-Return
 Zooms/cycles focused window to/from master area (tiled layouts only).
 .TP
-.B Mod1\-Shift\-c
+.B MODKEY\-q
 Close focused window.
 .TP
-.B Mod1\-Shift\-space
+.B MODKEY\-Shift\-space
 Toggle focused window between tiled and floating state.
 .TP
-.B Mod1\-Tab
+.B MODKEY\-Tab
 Toggles to the previously selected tags.
 .TP
-.B Mod1\-Shift\-[1..n]
+.B MODKEY\-Shift\-[1..n]
 Apply nth tag to focused window.
 .TP
-.B Mod1\-Shift\-0
+.B MODKEY\-Shift\-0
 Apply all tags to focused window.
 .TP
-.B Mod1\-Control\-Shift\-[1..n]
+.B MODKEY\-Control\-Shift\-[1..n]
 Add/remove nth tag to/from focused window.
 .TP
-.B Mod1\-[1..n]
+.B MODKEY\-[1..n]
 View all windows with nth tag.
 .TP
-.B Mod1\-0
+.B MODKEY\-0
 View all windows with any tag.
 .TP
-.B Mod1\-Control\-[1..n]
+.B MODKEY\-Control\-[1..n]
 Add/remove all windows with nth tag to/from the view.
 .TP
-.B Mod1\-Shift\-q
+.B MODKEY\-Shift\-q
 Quit dwm.
 .SS Mouse commands
 .TP
-.B Mod1\-Button1
+.B MODKEY\-Button1
 Move focused window while dragging. Tiled windows will be toggled to the floating state.
 .TP
-.B Mod1\-Button2
+.B MODKEY\-Button2
 Toggles focused window between floating and tiled state.
 .TP
-.B Mod1\-Button3
+.B MODKEY\-Button3
 Resize focused window while dragging. Tiled windows will be toggled to the floating state.
 .SH CUSTOMIZATION
 dwm is customized by creating a custom config.h and (re)compiling the source
