@@ -7,7 +7,7 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"dina:size=8", 
+	"Dina:size=8", 
 	/* "xos4 Terminus:size=10", */
 	"Siji:style=Regular",
 	"monospace:size=10",
@@ -177,7 +177,7 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkStatusText,        0,              Button1,        spawn,          {.v = srshtcmd } },
+	{ ClkStatusText,        0,              Button3,        spawn,          {.v = srshtcmd } },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
