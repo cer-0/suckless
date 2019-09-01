@@ -7,24 +7,25 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"Dina:size=8", 
-	/* "xos4 Terminus:size=10", */
+	/* "Dina:size=8", */ 
+	"Misc Tamsyn:size=10",
 	"Siji:style=Regular",
 	"monospace:size=10",
 };
-static const char dmenufont[]       = "dina:size=8";
-static const char col_gray1[]       = "#2b303b"; /* bar BG */
-static const char col_gray2[]       = "#2b303b"; /* unfocused border */
-static const char col_gray3[]       = "#8fa1b3"; /* tags text */
-static const char col_gray4[]       = "#c0c5ce"; /* window text */
-static const char col_cyan[]        = "#b48ead"; /* title BG */
-static const char col_yell[]        = "#ebcb8b";
-static const char col_redd[]        = "#bf616a";
-static const char col_gree[]        = "#a3be8c";
+static const char dmenufont[]       = "Misc Tamsyn:size=11";
+static const char col_gray1[]       = "#263238"; /* bar BG */
+static const char col_gray2[]       = "#263238"; /* unfocused border */
+static const char col_gray3[]       = "#cdd3de"; /* tags text */
+static const char col_gray4[]       = "#cdd3de"; /* window text */
+static const char col_cyan[]        = "#00bcd4"; /* title BG */
+static const char col_yell[]        = "#ffcc00";
+static const char col_redd[]        = "#ec5f67";
+static const char col_gree[]        = "#8bd649";
+static const char col_oran[]        = "#ea9560";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1, col_gray3  },
+	[SchemeSel]  = { col_cyan, col_gray1, col_cyan  },
 };
 
 /* tagging */
@@ -85,7 +86,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
+/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL }; */
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon,"-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* extra commands */
 static const char *stabbedcmd[] = { "tabbed", "-c", "st", "-w", NULL };
@@ -115,10 +117,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = pythncmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dsplycmd } },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = srshtcmd } },
 	{ 0,                           0x1008FF2d, spawn,          {.v = slockcmd } },
 	{ 0,                           0x1008FF11, spawn,          {.v = downvol } },
+	{ MODKEY,                      XK_Down,    spawn,          {.v = downvol } },
 	{ 0,                           0x1008FF12, spawn,          {.v = mute } },
 	{ 0,                           0x1008FF13, spawn,          {.v = upvol } },
+	{ MODKEY,                      XK_Up,      spawn,          {.v = upvol } },
 	{ 0,                           0x1008FF14, spawn,          {.v = pplpa } },
 	{ 0,                           0x1008FF15, spawn,          {.v = pstop } },
 	{ 0,                           0x1008FF16, spawn,          {.v = pprev } },
