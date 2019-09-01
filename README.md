@@ -18,7 +18,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## About
 
-![Personal](./pic/04.png)
+![Personal](./pic/01.png)
 
 This fork contains two versions of dwm, a __"vanilla"__ version
 and a __"personal"__ one. The first comes with a couple of 
@@ -34,7 +34,7 @@ In order to build dwm you need the Xlib header files.
 ### Optional dependencies
 
 ```
-    siji-font dina-font terminus-font playerctl alsamixer alsa-utils nnn
+    {siji,dina,terminus,tamsyn}-font playerctl alsamixer alsa-utils nnn
     scrot slock tabbed st surf dmenu
 ```
 
@@ -104,14 +104,10 @@ and (re)compiling the source code. (:
 
 ## Shots
 
-Single focused window
+Centered master layout (`st` running `htop` and `nyancat`).
 
-![single](./pic/01.png)
+![single](./pic/02.png)
 
-Fake busy
+Tiled layout (`surf`, and `tmux` inside `st`).
 
-![busy](./pic/02.png)
-
-Grid
-
-![grid](./pic/03.png)
+![busy](./pic/03.png)
