@@ -100,6 +100,7 @@ static const char *srshtcmd[]   = { "srsh", NULL };
 static const char *sshotcmd[]   = { "sshot", NULL };
 /* volume-media keys */
 static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
+static const char *dmcmd[]  = { "dm", NULL };
 static const char *upvol[]   = { "amixer", "set", "Master", "2+", NULL };
 static const char *mute[]    = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static const char *pplpa[]   = { "playerctl", "-a", "play-pause", NULL };
@@ -118,6 +119,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dsplycmd } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = srshtcmd } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = dmcmd } },
 	{ 0,                           0x1008FF2d, spawn,          {.v = slockcmd } },
 	{ 0,                           0x1008FF11, spawn,          {.v = downvol } },
 	{ MODKEY,                      XK_Down,    spawn,          {.v = downvol } },
