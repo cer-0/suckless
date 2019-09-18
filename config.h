@@ -29,15 +29,11 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = {
-	"\ue110",
-	"\ue111",
-	"\ue112",
-	"\ue113",
-	"\ue114",
-	/* "\ue18c", */
-	/* "\ue18d", */
-	/* "\ue18e", */
-	/* "\ue18f" */
+	"\ue010",
+	"\ue011",
+	"\ue012",
+	"\ue013",
+	"\ue014",
 };
 
 static const Rule rules[] = {
@@ -87,9 +83,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL }; */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon,"-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
-static const char *termcmd[]  = { "st", NULL };
-/* extra commands */
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon,"-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
+static const char *termcmd[]    = { "st", NULL };
 static const char *stabbedcmd[] = { "tabbed", "-c", "st", "-w", NULL };
 static const char *srftbedcmd[] = { "tabbed", "-c", "surf", "-e", NULL };
 static const char *nnnfmcmd[]   = { "st", "-t", "3n", "-e", "nnn", NULL };
@@ -98,15 +93,14 @@ static const char *slockcmd[]   = { "slock", NULL };
 static const char *dsplycmd[]   = { "monitor", NULL };
 static const char *srshtcmd[]   = { "srsh", NULL };
 static const char *sshotcmd[]   = { "sshot", NULL };
-/* volume-media keys */
-static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
-static const char *dmcmd[]  = { "dm", NULL };
-static const char *upvol[]   = { "amixer", "set", "Master", "2+", NULL };
-static const char *mute[]    = { "amixer", "-q", "set", "Master", "toggle", NULL };
-static const char *pplpa[]   = { "playerctl", "-a", "play-pause", NULL };
-static const char *pstop[]   = { "playerctl", "-a", "stop", NULL };
-static const char *pnext[]   = { "playerctl", "-a", "next", NULL };
-static const char *pprev[]   = { "playerctl", "-a", "previous", NULL };
+static const char *downvol[]    = { "amixer", "set", "Master", "2-", NULL };
+static const char *dmcmd[]      = { "dm", NULL };
+static const char *upvol[]      = { "amixer", "set", "Master", "2+", NULL };
+static const char *mute[]       = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *pplpa[]      = { "playerctl", "-a", "play-pause", NULL };
+static const char *pstop[]      = { "playerctl", "-a", "stop", NULL };
+static const char *pnext[]      = { "playerctl", "-a", "next", NULL };
+static const char *pprev[]      = { "playerctl", "-a", "previous", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -120,21 +114,21 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dsplycmd } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = srshtcmd } },
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = dmcmd } },
+	{ MODKEY,                       XK_Down,   spawn,          {.v = downvol } },
+	{ MODKEY,                       XK_Up,     spawn,          {.v = upvol } },
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = pplpa } },
+	{ MODKEY,                       XK_Left,   spawn,          {.v = pprev } },
+	{ MODKEY,                       XK_Right,  spawn,          {.v = pnext } },
 	{ 0,                           0x1008FF2d, spawn,          {.v = slockcmd } },
 	{ 0,                           0x1008FF11, spawn,          {.v = downvol } },
-	{ MODKEY,                      XK_Down,    spawn,          {.v = downvol } },
-	{ 0,                           0x1008FF12, spawn,          {.v = mute } },
-	{ 0,                           0x1008FF13, spawn,          {.v = upvol } },
-	{ MODKEY,                      XK_Up,      spawn,          {.v = upvol } },
-	{ 0,                           0x1008FF14, spawn,          {.v = pplpa } },
-	{ MODKEY|ShiftMask,            XK_Up,      spawn,          {.v = pplpa } },
-	{ 0,                           0x1008FF15, spawn,          {.v = pstop } },
-	{ 0,                           0x1008FF16, spawn,          {.v = pprev } },
-	{ MODKEY,                      XK_Left,    spawn,          {.v = pprev } },
-	{ 0,                           0x1008FF17, spawn,          {.v = pnext } },
-	{ MODKEY,                      XK_Right,   spawn,          {.v = pnext } },
 	{ 0,                           0x1008FF59, spawn,          {.v = dsplycmd } },
 	{ 0,                           0xff61,     spawn,          {.v = sshotcmd } },
+	{ 0,                           0x1008FF17, spawn,          {.v = pnext } },
+	{ 0,                           0x1008FF15, spawn,          {.v = pstop } },
+	{ 0,                           0x1008FF16, spawn,          {.v = pprev } },
+	{ 0,                           0x1008FF12, spawn,          {.v = mute } },
+	{ 0,                           0x1008FF13, spawn,          {.v = upvol } },
+	{ 0,                           0x1008FF14, spawn,          {.v = pplpa } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
@@ -174,10 +168,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_8,                      3)
 	TAGKEYS(                        XK_9,                      4)
-	/* TAGKEYS(                        XK_6,                      5) */
-	/* TAGKEYS(                        XK_7,                      6) */
-	/* TAGKEYS(                        XK_8,                      7) */
-	/* TAGKEYS(                        XK_9,                      8) */
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
