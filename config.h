@@ -82,7 +82,6 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL }; */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon,"-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *stabbedcmd[] = { "tabbed", "-c", "st", "-w", NULL };
@@ -113,10 +112,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dsplycmd } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = srshtcmd } },
-	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = dmcmd } },
+	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = pplpa } },
 	{ MODKEY,                       XK_Down,   spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_Up,     spawn,          {.v = upvol } },
-	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = pplpa } },
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = dmcmd } },
 	{ MODKEY,                       XK_Left,   spawn,          {.v = pprev } },
 	{ MODKEY,                       XK_Right,  spawn,          {.v = pnext } },
 	{ 0,                           0x1008FF2d, spawn,          {.v = slockcmd } },
