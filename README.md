@@ -34,8 +34,8 @@ In order to build dwm you need the Xlib header files.
 ### Optional dependencies
 
 ```
-    {siji,dina,terminus,tamsyn}-font playerctl alsamixer alsa-utils nnn
-    scrot slock tabbed st surf dmenu
+    {siji,dina}-font playerctl alsamixer alsa-utils nnn
+    maim slock tabbed st surf dmenu
 ```
 
 > You can build `slock tabbed st surf dmenu`, check
