@@ -18,7 +18,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## About
 
-![Personal](./pic/01.png)
+![1](./pic/01.png)
 
 This fork contains two versions of dwm, a __"vanilla"__ version
 and a __"personal"__ one. The first comes with a couple of 
@@ -104,10 +104,6 @@ and (re)compiling the source code. (:
 
 ## Shots
 
-Centered master layout (`st` running `htop` and `nyancat`).
+![1](./pic/02.png)
 
-![single](./pic/02.png)
-
-Tiled layout (`surf`, and `tmux` inside `st`).
-
-![busy](./pic/03.png)
+![2](./pic/03.png)
