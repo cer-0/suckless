@@ -4,23 +4,24 @@
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 10;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"Dina:size=8", 
+	"Cascadia Code:size=10", 
+	/* "Dina:size=8", */ 
 	"Siji:style=Regular",
 	"monospace:size=10",
 };
-static const char dmenufont[]       = "Dina:size=8";
-static const char col_gray1[]       = "#263238"; /* bar BG */
-static const char col_gray2[]       = "#263238"; /* unfocused border */
-static const char col_gray3[]       = "#cdd3de"; /* tags text */
-static const char col_gray4[]       = "#cdd3de"; /* window text */
-static const char col_cyan[]        = "#00bcd4"; /* title BG */
-static const char col_yell[]        = "#ffcc00";
-static const char col_redd[]        = "#ec5f67";
-static const char col_gree[]        = "#8bd649";
-static const char col_oran[]        = "#ea9560";
+static const char dmenufont[]       = "Cascadia Code:size=10";
+static const char col_gray1[]       = "#2e3440"; /* bar BG */
+static const char col_gray2[]       = "#2e3440"; /* unfocused border */
+static const char col_gray3[]       = "#d8dee9"; /* tags text */
+static const char col_gray4[]       = "#d8dee9"; /* window text */
+static const char col_cyan[]        = "#81a1c1"; /* focused window border */
+static const char col_yell[]        = "#ebcb8b";
+static const char col_redd[]        = "#bf616a";
+static const char col_gree[]        = "#a3be8c";
+static const char col_oran[]        = "#d08770";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -42,8 +43,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Firefox",  "firefox",       NULL,       1 << 1,       0,           -1 },
-	{ "spotify",  NULL,            NULL,       1 << 4,       0,           -1 },
+	{ "firefox",  "firefox",       NULL,       1 << 1,       0,           -1 },
 	{ "VirtualBox Manager",  NULL, NULL,       1 << 3,       0,           -1 },
 };
 
