@@ -1,13 +1,13 @@
-/* See LICENSE file for copyright and license details. */
+
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 10;       /* snap pixel */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"Cascadia Code:size=10", 
+	"UW Ttyp0:size=10", 
 	/* "Dina:size=8", */ 
 	"Siji:style=Regular",
 	"monospace:size=10",
@@ -150,8 +150,8 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_v,      setlayout,      {.v = &layouts[7]} },
         { MODKEY,                       XK_z,      setlayout,      {.v = &layouts[8]} },
         { MODKEY|ShiftMask,             XK_z,      setlayout,      {.v = &layouts[9]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_space,  setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_a,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
