@@ -1,5 +1,3 @@
-
-
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows */
@@ -7,7 +5,7 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"UW Ttyp0:size=10", 
+	"Cascadia Code:size=10", 
 	/* "Dina:size=8", */ 
 	"Siji:style=Regular",
 	"monospace:size=10",
@@ -90,10 +88,10 @@ static const char *nnnfmcmd[]   = { "st", "-t", "3n", "-e", "nnn", NULL };
 static const char *pythncmd[]   = { "st", "-t", "calq", "-e", "python", "-q", NULL };
 static const char *slockcmd[]   = { "slock", NULL };
 static const char *dsplycmd[]   = { "monitor", NULL };
-static const char *srshtcmd[]   = { "srsh", NULL };
-static const char *sshotcmd[]   = { "sshot", NULL };
+static const char *srshtcmd[]   = { "out", NULL };
+static const char *sshotcmd[]   = { "mshot", NULL };
+static const char *backgcmd[]   = { "walp", NULL };
 static const char *downvol[]    = { "amixer", "set", "Master", "2-", NULL };
-static const char *dmcmd[]      = { "dm", NULL };
 static const char *upvol[]      = { "amixer", "set", "Master", "2+", NULL };
 static const char *mute[]       = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static const char *pplpa[]      = { "playerctl", "-a", "play-pause", NULL };
@@ -115,9 +113,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = pplpa } },
 	{ MODKEY,                       XK_Down,   spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_Up,     spawn,          {.v = upvol } },
-	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = dmcmd } },
 	{ MODKEY,                       XK_Left,   spawn,          {.v = pprev } },
 	{ MODKEY,                       XK_Right,  spawn,          {.v = pnext } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = backgcmd } },
 	{ 0,                           0x1008FF2d, spawn,          {.v = slockcmd } },
 	{ 0,                           0x1008FF11, spawn,          {.v = downvol } },
 	{ 0,                           0x1008FF59, spawn,          {.v = dsplycmd } },
