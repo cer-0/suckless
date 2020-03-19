@@ -27,12 +27,20 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
+/* static const char *tags[] = { */
+/* 	"\ue010", */
+/* 	"\ue011", */
+/* 	"\ue012", */
+/* 	"\ue013", */
+/* 	"\ue014", */
+/* }; */
 static const char *tags[] = {
-	"\ue010",
-	"\ue011",
-	"\ue012",
-	"\ue013",
-	"\ue014",
+	"1",
+	"10",
+	"11",
+	"100",
+	"101",
+	"111",
 };
 
 static const Rule rules[] = {
@@ -163,8 +171,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_8,                      3)
-	TAGKEYS(                        XK_9,                      4)
+	TAGKEYS(                        XK_7,                      3)
+	TAGKEYS(                        XK_8,                      4)
+	TAGKEYS(                        XK_9,                      5)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
