@@ -48,9 +48,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "firefox",  "firefox",       NULL,       1 << 1,       0,           -1 },
-	{ "VirtualBox Manager",  NULL, NULL,       1 << 3,       0,           -1 },
+	/* class              instance    title       tags mask     isfloating   monitor */
+	{ "Navigator",          "firefox",  NULL,       1 << 1,       0,           -1 },
+	{ "TelegramDesktop",  NULL,       NULL,       1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
