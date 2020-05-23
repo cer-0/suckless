@@ -5,12 +5,12 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"Cascadia Code:size=10", 
-	/* "Dina:size=8", */ 
+	"Dina:size=10", 
 	"Siji:style=Regular",
 	"monospace:size=10",
 };
-static const char dmenufont[]       = "Cascadia Code:size=10";
+/* static const char dmenufont[]       = "Cascadia Code:size=10"; */
+static const char dmenufont[]       = "Dina:size=10";
 static const char col_gray1[]       = "#2e3440"; /* bar BG */
 static const char col_gray2[]       = "#2e3440"; /* unfocused border */
 static const char col_gray3[]       = "#d8dee9"; /* tags text */
@@ -89,6 +89,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon,"-nb", col_gray1, "-nf", col_gray4, "-sb", col_gree, "-sf", col_gray1, NULL };
+static const char *ttftermcmd[] = { "st", "-f", "Cascadia Code:style=Regular:size=12", NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *stabbedcmd[] = { "tabbed", "-c", "st", "-w", NULL };
 static const char *srftbedcmd[] = { "tabbed", "-c", "surf", "-e", NULL };
@@ -111,6 +112,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_e,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,           XK_c,      spawn,          {.v = ttftermcmd } },
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = stabbedcmd } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = nnnfmcmd} },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = srftbedcmd } },
