@@ -5,21 +5,21 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"Dina:size=10", 
+	"Dina:size=9", 
 	"Siji:style=Regular",
 	"monospace:size=10",
 };
 /* static const char dmenufont[]       = "Cascadia Code:size=10"; */
 static const char dmenufont[]       = "Dina:size=10";
-static const char col_gray1[]       = "#2e3440"; /* bar BG */
-static const char col_gray2[]       = "#2e3440"; /* unfocused border */
-static const char col_gray3[]       = "#d8dee9"; /* tags text */
-static const char col_gray4[]       = "#d8dee9"; /* window text */
-static const char col_cyan[]        = "#81a1c1"; /* focused window border */
+static const char col_gray1[]       = "#161821"; /* bar BG */
+static const char col_gray2[]       = "#161821"; /* unfocused border */
+static const char col_gray3[]       = "#c6c8d1"; /* tags text */
+static const char col_gray4[]       = "#c6c8d1"; /* window text */
+static const char col_cyan[]        = "#a093c7"; /* focused window border */
 static const char col_yell[]        = "#ebcb8b";
-static const char col_redd[]        = "#bf616a";
-static const char col_gree[]        = "#a3be8c";
-static const char col_oran[]        = "#d08770";
+static const char col_redd[]        = "#e27878";
+static const char col_gree[]        = "#b4be82";
+static const char col_oran[]        = "#e2a478";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
