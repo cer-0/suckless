@@ -34,13 +34,13 @@ In order to build dwm you need the Xlib header files.
 ### Optional dependencies
 
 ```
-    {siji,dina}-font playerctl alsamixer alsa-utils nnn
-    maim slock tabbed st surf dmenu
+    {siji,dina,cozette}-font playerctl alsamixer alsa-utils nnn
+    maim slock tabbed st dmenu
 ```
 
-> You can build `slock tabbed st surf dmenu`, check
+> You can build `slock tabbed st dmenu`, check
   [suckless](https://suckless.org) website. `siji-font` is available in
-  this [repo](https://github.com/stark/siji).
+  this [repo](https://github.com/stark/siji) and `cozette`.
 
 ## Installation
 Clone and edit `config.mk` to match your local setup (dwm is installed into
