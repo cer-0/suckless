@@ -4,23 +4,23 @@ Forks of suckless programs.
 
 ---
 ## st
-![st](./pic/st.png)
+![st](./.img/st.png)
 
 ---
 ## dmenu
-![dmenu](./pic/dmenu.png)
+![dmenu](./.img/dmenu.png)
 
 ---
 ## slock
-![slock](./pic/slock.png)
+![slock](./.img/slock.png)
 
 ---
 ## surf
-![surf](./pic/surf.png)
+![surf](./.img/surf.png)
 
 ---
 ## slstatus
-![slstatus](./pic/slstatus.png)
+![slstatus](./.img/slstatus.png)
 
 ---
 ## dwm - dynamic window manager
@@ -29,7 +29,7 @@ Forks of suckless programs.
 
 ### About
 
-![1](./pic/01.png)
+![1](./.img/01.png)
 
 This fork contains two versions of dwm, a __"vanilla"__ version
 and a __"personal"__ one. The first comes with a couple of 
@@ -115,6 +115,6 @@ and (re)compiling the source code. (:
 
 ### Screenshots
 
-![1](./pic/02.png)
+![1](./.img/02.png)
 
-![2](./pic/03.png)
+![2](./.img/03.png)
