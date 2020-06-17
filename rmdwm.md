@@ -1,33 +1,22 @@
-# suckless
-
-Forks of suckless programs.
-
----
-## st
-![st](./pic/st.png)
-
----
-## dmenu
-![dmenu](./pic/dmenu.png)
-
----
-## slock
-![slock](./pic/slock.png)
-
----
-## surf
-![surf](./pic/surf.png)
-
----
-## slstatus
-![slstatus](./pic/slstatus.png)
-
----
-## dwm - dynamic window manager
+# dwm - dynamic window manager
 
 ![dwm](./dwm.png)
 
-### About
+dwm is an extremely fast, small, and dynamic window manager for X.
+
+- [About](#about)
+- [Requirements](#requirements)
+  * [Optional dependencies](#optional-dependencies)
+- [Installation](#installation)
+    + [vanilla](#vanilla)
+    + [personal](#personal)
+- [Running dwm](#running-dwm)
+- [Configuration](#configuration)
+- [Shots](#shots)
+
+<small><a href='http://ecotrust-canada.github.io/markdown-toc/'>TOC generated with markdown-toc</a></small> <3
+
+## About
 
 ![1](./pic/01.png)
 
@@ -38,11 +27,11 @@ of dwm. The second comes with the same patches, but has a
 different configuration file, thus it requires some
 [dependencies](#optional-dependencies).
 
-### Requirements
+## Requirements
 In order to build dwm you need the Xlib header files.
 
 
-#### Optional dependencies
+### Optional dependencies
 
 ```
     {siji,dina,cozette}-font playerctl alsamixer alsa-utils nnn
@@ -53,11 +42,11 @@ In order to build dwm you need the Xlib header files.
   [suckless](https://suckless.org) website. `siji-font` is available in
   this [repo](https://github.com/stark/siji) and `cozette`.
 
-### Installation
+## Installation
 Clone and edit `config.mk` to match your local setup (dwm is installed into
 the `/usr/local` namespace by default).
 
-##### vanilla
+#### vanilla
 
 Enter the following commands to build and install dwm (if necessary as root):
 
@@ -66,7 +55,7 @@ rm config.h
 make clean install
 ```
 
-##### personal
+#### personal
 
 Run the next line to build and install dwm with my personal configuration
 (if necessary as root):
@@ -78,7 +67,7 @@ make && make install
 > Check the optional [dependencies](#optional-dependencies) in order
   to have the setup functionalities.
 
-### Running dwm
+## Running dwm
 
 Add the following line to your `.xinitrc` to start dwm using `startx`:
 
@@ -109,11 +98,11 @@ like this in your `.xinitrc`:
 Or create a custom script and execute it in `.xinitrc`.
 
 
-### Configuration
+## Configuration
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code. (:
 
-### Screenshots
+## Shots
 
 ![1](./pic/02.png)
 
